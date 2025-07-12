@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback | काग़ज़ khaab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #f4f4f4;
+      font-family: 'Cormorant Garamond', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #e26d8a;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    input, textarea {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid #e26d8a;
+      color: #f4f4f4;
+      padding: 14px;
+      font-size: 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      outline: none;
+      resize: none;
+      transition: border-color 0.3s ease;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #999;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #f87d9a;
+    }
+
+    button {
+      background: #e26d8a;
+      color: #0d0d0d;
+      border: none;
+      padding: 12px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    button:hover {
+      background: #f87d9a;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #555;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Whisper to काग़ज़ khaab</h1>
+  <p>Leave behind your thoughts, stories, or silent echoes.</p>
+
+  <form action="https://formspree.io/f/xeozjjqo" method="POST">
+    <input type="text" name="name" placeholder="Your name (optional)">
+    <textarea name="message" rows="6" placeholder="Your message to the creator..." required></textarea>
+    <button type="submit">Send Your Words</button>
+  </form>
+
+  <div class="footer">
+    feedback://kaagaz initialized ✦ crafted by @anurvg.r
+  </div>
+</body>
+</html>
