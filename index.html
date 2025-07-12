@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <title>Feedback | काग़ज़ khaab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #0d0d0d;
-      color: #f4f4f4;
-      font-family: 'Cormorant Garamond', serif;
+      background: linear-gradient(145deg, #1f1c2c, #928dab);
+      font-family: 'Ubuntu Mono', monospace;
+      color: #e3f2fd;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -17,91 +17,85 @@
       min-height: 100vh;
       padding: 40px 20px;
       text-align: center;
-      animation: fadeIn 3s ease-in-out;
     }
 
     h1 {
-      font-size: 2.5rem;
-      color: #e26d8a;
+      font-size: 2.2rem;
       margin-bottom: 10px;
-      letter-spacing: 1px;
+      color: #f4e8ff;
     }
 
     p {
-      font-size: 1.1rem;
-      color: #ccc;
+      font-size: 1rem;
+      color: #cdeaff;
       margin-bottom: 30px;
+      opacity: 0.85;
     }
 
     form {
       width: 100%;
-      max-width: 480px;
+      max-width: 500px;
       display: flex;
       flex-direction: column;
       gap: 18px;
     }
 
     input, textarea {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid #e26d8a;
-      color: #f4f4f4;
-      padding: 14px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #e3f2fd;
+      padding: 12px;
       font-size: 1rem;
-      font-family: 'Cormorant Garamond', serif;
-      outline: none;
-      resize: none;
-      transition: border-color 0.3s ease;
+      border-radius: 8px;
+      font-family: 'Ubuntu Mono', monospace;
+      transition: border 0.3s ease;
     }
 
     input::placeholder, textarea::placeholder {
-      color: #999;
+      color: #aabed9;
     }
 
     input:focus, textarea:focus {
-      border-color: #f87d9a;
+      border-color: #e0f7fa;
     }
 
     button {
-      background: #e26d8a;
-      color: #0d0d0d;
-      border: none;
-      padding: 12px;
-      font-weight: bold;
+      background: rgba(255, 255, 255, 0.1);
+      color: #e0f7fa;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 10px;
       font-size: 1rem;
+      font-family: 'Ubuntu Mono', monospace;
       cursor: pointer;
-      transition: background 0.3s ease;
-      font-family: 'Cormorant Garamond', serif;
+      border-radius: 6px;
+      transition: all 0.3s ease;
     }
 
     button:hover {
-      background: #f87d9a;
+      background: rgba(255, 255, 255, 0.2);
+      color: #000;
     }
 
     .footer {
       margin-top: 40px;
-      font-size: 0.8rem;
-      color: #555;
-      letter-spacing: 0.5px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      font-size: 0.75rem;
+      color: #b0b0b0;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
   <h1>Whisper to काग़ज़ khaab</h1>
-  <p>Leave behind your thoughts, stories, or silent echoes.</p>
+  <p>Leave your thoughts, feedback, or whispers in the static.</p>
 
   <form action="https://formspree.io/f/xeozjjqo" method="POST">
     <input type="text" name="name" placeholder="Your name (optional)">
-    <textarea name="message" rows="6" placeholder="Your message to the creator..." required></textarea>
-    <button type="submit">Send Your Words</button>
+    <textarea name="message" rows="6" placeholder="Your message..." required></textarea>
+    <button type="submit">Send Feedback</button>
   </form>
 
   <div class="footer">
-    feedback://kaagaz initialized ✦ crafted by @anurvg.r
+    feedback://kaagaz initialized ©2025 by @anurvg.r
   </div>
 </body>
 </html>
