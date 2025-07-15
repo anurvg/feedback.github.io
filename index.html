@@ -2,100 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Feedback | काग़ज़ khaab</title>
+  <title>Feedback | AnuragVerse</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background: linear-gradient(145deg, #1f1c2c, #928dab);
-      font-family: 'Ubuntu Mono', monospace;
-      color: #e3f2fd;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(-45deg, #0f1115, #1a1f26, #111417, #1a1f26);
+      background-size: 400% 400%;
+      animation: gradientFlow 20s ease infinite;
+      color: #e2e8f0;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
       padding: 40px 20px;
-      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @keyframes gradientFlow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
 
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-      color: #f4e8ff;
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #ffffff;
+      z-index: 2;
     }
 
     p {
-      font-size: 1rem;
-      color: #cdeaff;
-      margin-bottom: 30px;
-      opacity: 0.85;
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      margin-bottom: 32px;
+      z-index: 2;
     }
 
     form {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      padding: 36px;
+      border-radius: 16px;
+      max-width: 520px;
       width: 100%;
-      max-width: 500px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      z-index: 2;
     }
 
     input, textarea {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #e3f2fd;
-      padding: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #e2e8f0;
+      padding: 14px 16px;
       font-size: 1rem;
-      border-radius: 8px;
-      font-family: 'Ubuntu Mono', monospace;
-      transition: border 0.3s ease;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      transition: 0.3s ease;
     }
 
     input::placeholder, textarea::placeholder {
-      color: #aabed9;
+      color: #94a3b8;
     }
 
     input:focus, textarea:focus {
-      border-color: #e0f7fa;
+      outline: none;
+      border-color: #38bdf8;
+      background: rgba(255, 255, 255, 0.05);
     }
 
     button {
-      background: rgba(255, 255, 255, 0.1);
-      color: #e0f7fa;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 10px;
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      color: #e0f2fe;
+      border: none;
+      padding: 14px;
       font-size: 1rem;
-      font-family: 'Ubuntu Mono', monospace;
+      font-weight: 600;
+      border-radius: 12px;
       cursor: pointer;
-      border-radius: 6px;
-      transition: all 0.3s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3), inset 0 0 0 rgba(56, 189, 248, 0);
     }
 
     button:hover {
-      background: rgba(255, 255, 255, 0.2);
-      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5), inset 0 0 10px rgba(56, 189, 248, 0.3);
+      background: linear-gradient(145deg, #0f172a, #1e293b);
+      color: #ffffff;
     }
 
     .footer {
-      margin-top: 40px;
+      margin-top: 50px;
       font-size: 0.75rem;
-      color: #b0b0b0;
+      color: #64748b;
       opacity: 0.6;
+      z-index: 2;
+    }
+
+    .svg-background {
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 140%;
+      height: 140%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .blob {
+      fill: #38bdf8;
+      opacity: 0.06;
+    }
+
+    @media(max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Whisper to काग़ज़ khaab</h1>
-  <p>Leave your thoughts, feedback, or whispers in the static.</p>
+  <div class="svg-background">
+    <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <path class="blob" d="M370,300 Q350,450 500,400 Q650,350 600,200 Q550,50 400,100 Q250,150 370,300 Z">
+        <animate attributeName="d" dur="9s" repeatCount="indefinite" values="
+          M370,300 Q350,450 500,400 Q650,350 600,200 Q550,50 400,100 Q250,150 370,300 Z;
+          M300,300 Q320,500 500,450 Q680,400 620,220 Q560,40 380,80 Q200,120 300,300 Z;
+          M400,300 Q360,460 500,410 Q640,360 590,220 Q540,80 390,130 Q240,180 400,300 Z;
+          M370,300 Q350,450 500,400 Q650,350 600,200 Q550,50 400,100 Q250,150 370,300 Z
+        " />
+      </path>
+    </svg>
+  </div>
+
+  <h1>Contact AnuragVerse</h1>
+  <p>For feedback, suggestions, or professional inquiries.</p>
 
   <form action="https://formspree.io/f/xeozjjqo" method="POST">
     <input type="text" name="name" placeholder="Your name (optional)">
-    <textarea name="message" rows="6" placeholder="Your message..." required></textarea>
+    <textarea name="message" rows="6" placeholder="Type your message here..." required></textarea>
     <button type="submit">Send Feedback</button>
   </form>
 
   <div class="footer">
-    feedback://kaagaz initialized ©2025 by @anurvg.r
+    feedback://anuragverse initialized • ©2025 Anurag Borkakati
   </div>
 </body>
 </html>
